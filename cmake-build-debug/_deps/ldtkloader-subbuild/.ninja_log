@@ -1,0 +1,21 @@
+# ninja log v5
+0	47	6864405603410561	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-mkdir	e419ab4ec9f085be
+0	47	6864405603410561	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-mkdir	e419ab4ec9f085be
+47	1291	6864405615854615	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-download	c014634eaf5bccc5
+47	1291	6864405615854615	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-download	c014634eaf5bccc5
+1291	1377	0	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-update	812cff2950fbf03e
+1291	1377	0	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-update	812cff2950fbf03e
+1378	1415	6864405617104615	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-patch	6c9409e36c5cf520
+1378	1415	6864405617104615	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-patch	6c9409e36c5cf520
+1415	1451	6864405617464612	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-configure	6e5b7b7cebec2284
+1415	1451	6864405617464612	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-configure	6e5b7b7cebec2284
+1451	1488	6864405617834871	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-build	1a0f87443a5b7dc7
+1451	1488	6864405617834871	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-build	1a0f87443a5b7dc7
+1488	1524	6864405618184902	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-install	82fb184de4447684
+1488	1524	6864405618184902	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-install	82fb184de4447684
+1524	1560	6864405618554592	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-test	48410c8db3f8f291
+1524	1560	6864405618554592	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-test	48410c8db3f8f291
+1561	1620	6864405619144924	CMakeFiles/ldtkloader-populate-complete	5dc1720342d3c3e3
+1561	1620	6864405619144924	ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-done	5dc1720342d3c3e3
+1561	1620	6864405619144924	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/CMakeFiles/ldtkloader-populate-complete	5dc1720342d3c3e3
+1561	1620	6864405619144924	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/ldtkloader-populate-done	5dc1720342d3c3e3

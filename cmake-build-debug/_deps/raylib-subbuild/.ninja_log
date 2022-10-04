@@ -1,0 +1,21 @@
+# ninja log v5
+1	43	6864405150178965	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	5dd9c17448fe940
+1	43	6864405150178965	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	5dd9c17448fe940
+43	44144	6864405591190150	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	9739dc132d273e9c
+43	44144	6864405591190150	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	9739dc132d273e9c
+44144	44243	0	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	971d87128ce1ba48
+44144	44243	0	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	971d87128ce1ba48
+44245	44287	6864405592630151	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	32a6e09574b014ec
+44245	44287	6864405592630151	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	32a6e09574b014ec
+44288	44327	6864405593010167	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	824332ea1711a230
+44288	44327	6864405593010167	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	824332ea1711a230
+44327	44365	6864405593400145	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	95092c0eab442c5a
+44327	44365	6864405593400145	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	95092c0eab442c5a
+44365	44402	6864405593780466	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	ba6c94419b4e25c7
+44365	44402	6864405593780466	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	ba6c94419b4e25c7
+44402	44439	6864405594150166	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	bba9143ad3228685
+44402	44439	6864405594150166	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	bba9143ad3228685
+44439	44492	6864405594670493	CMakeFiles/raylib-populate-complete	b4104e9a73d0533a
+44439	44492	6864405594670493	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	b4104e9a73d0533a
+44439	44492	6864405594670493	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete	b4104e9a73d0533a
+44439	44492	6864405594670493	D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	b4104e9a73d0533a
