@@ -3,7 +3,7 @@ project(SpaceInvaders)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(SpaceInvaders main.cpp)
+add_executable(SpaceInvaders main.cpp player.cpp player.h)
 include(cmake/CPM.cmake)
 CPMAddPackage("gh:raysan5/raylib#4.2.0")
 CPMAddPackage("gh:Madour/LDtkLoader#1.0")

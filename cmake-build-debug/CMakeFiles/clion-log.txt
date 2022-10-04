@@ -1,15 +1,9 @@
 "C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.2/bin/ninja/win/ninja.exe" -G Ninja -S D:\workspace\Raylib\SpaceInvaders -B D:\workspace\Raylib\SpaceInvaders\cmake-build-debug
--- Downloading CPM.cmake to D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/cmake/CPM_0.35.6.cmake
 -- CPM: adding package raylib@4.2.0 (4.2.0)
--- Performing Test COMPILER_HAS_THOSE_TOGGLES
--- Performing Test COMPILER_HAS_THOSE_TOGGLES - Failed
 -- Testing if -Werror=pointer-arith can be used -- Failed
 -- Testing if -Werror=implicit-function-declaration can be used -- Failed
 -- Testing if -fno-strict-aliasing can be used -- Failed
 -- Using raylib's GLFW
--- Looking for pthread.h
--- Looking for pthread.h - not found
--- Found Threads: TRUE  
 -- Using Win32 for window creation
 -- Audio Backend: miniaudio
 -- Building raylib static library
