@@ -1,9 +1,15 @@
 #include <iostream>
 #include <LDtkLoader/Project.hpp>
 #include <raylib.h>
-#include "raymath.h"
+#include "Player.h"
+#include "Bunker.h"
+#include "Alien.h"
+
 using namespace std;
 
+const int scale = 2;
+const int windowWidth = 288;
+const int windowHeight = 448;
 
 //Renderable layer names
 const string renderableLayersNames[3]{
@@ -29,7 +35,7 @@ pair <vector<RenderTexture2D>, vector<Texture2D>> SetupTiles(const ldtk::World& 
 
         // Load the texture and the renderer.
         Texture2D texture = LoadTexture(("../assets/SpaceInvaders/map/" + layer.getTileset().path).c_str());
-        textures.push_back(texture);
+        textures.emplace_back(texture);
         RenderTexture2D renderer = LoadRenderTexture(256* 3, 448*3);
 
         BeginTextureMode(renderer);
@@ -79,6 +85,7 @@ void DrawRenderers (const vector<RenderTexture2D>& renderers, int scale ){
 };
 
 
+
 int main() {
     // declare a LDtk World
     ldtk::Project ldtk_project;
@@ -94,51 +101,49 @@ int main() {
 
     // get the world
     const auto& world = ldtk_project.getWorld();
-    const int scale = 2;
-    float speed{200};
-    const int playerHeightPosScale = 10;
-    const int windowWidth = 288;
-    const int windowHeight = 448;
 
     // Init Raylib and create a window.
     InitWindow(windowWidth * scale, windowHeight * scale, "Space Invaders");
     SetTargetFPS(60);
 
-
-    Texture2D bunker_left = LoadTexture("../assets/images/SpaceInvaders_10.png");
-    Texture2D bunker_right = LoadTexture("../assets/images/SpaceInvaders_11.png");
-    // get the level and the layer we want to render
-    const auto& level = world.getLevel("Level_0");
-    const auto& layer = level.getLayer("Props");
-    const auto& leftBunkers =  layer.getEntitiesByName("Bunker_Left");
-    const auto& rightBunkers =  layer.getEntitiesByName("Bunker_Right");
-    vector<Vector2> leftBunkersPos{};
-    vector<Vector2> rightBunkersPos{};
-
-    for (auto i : leftBunkers){
-        Vector2 pos = {
-            static_cast<float>(i.get().getPosition().x) * scale,
-            static_cast<float>(i.get().getPosition().y) * scale,
-        };
-        leftBunkersPos.emplace_back(pos);
-    }
-
-    for (auto i : rightBunkers){
-        Vector2 pos = {
-                static_cast<float>(i.get().getPosition().x) * scale,
-                static_cast<float>(i.get().getPosition().y) * scale,
-        };
-        rightBunkersPos.emplace_back(pos);
-    }
-
-    Texture2D playerShip = LoadTexture("../assets/spriteSheets/SpaceInvaders_player.png");
-    Vector2 playerShipPos = {
-            static_cast<float>(windowWidth) / 2 * scale - scale * static_cast<float>(playerShip.width)/2 ,
-            static_cast<float>(windowHeight) * scale - static_cast<float>(playerShip.height) * playerHeightPosScale
-    };
-
-
     auto setupTiles = SetupTiles(world,WHITE);
+
+    Player player(windowWidth, windowHeight);
+    Bunker bunker(world);
+
+    //Todo: Check into this
+    vector<Alien*> enemies;
+    Texture enemy1 = LoadTexture("../assets/spriteSheets/invader_001.png");
+    for(int i = 0; i <= 9; i++ ){
+        auto alien = new Alien(enemy1, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy1.width) * 5) + static_cast<float>(enemy1.width) * i),0});
+        enemies.emplace_back(alien);
+    }
+    Texture enemy2 = LoadTexture("../assets/spriteSheets/invader_002.png");
+    for(int i = 0; i <= 9; i++ ){
+        auto alien = new Alien(enemy2, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy2.width) * 5) + static_cast<float>(enemy2.width) * i),static_cast<float>(enemy1.height) + 10});
+        enemies.emplace_back(alien);
+    }
+    Texture enemy3 = LoadTexture("../assets/spriteSheets/invader_003.png");
+    for(int i = 0; i <= 9; i++ ){
+        auto alien = new Alien(enemy3, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>((enemy2.height + 10 )* 2)});
+        enemies.emplace_back(alien);
+    }
+    Texture enemy4 = LoadTexture("../assets/spriteSheets/invader_004.png");
+    for(int i = 0; i <= 9; i++ ){
+        auto alien = new Alien(enemy4, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>((enemy2.height  + 10) * 3)});
+        enemies.emplace_back(alien);
+    }
+    Texture enemy5 = LoadTexture("../assets/spriteSheets/invader_005.png");
+    for(int i = 0; i <= 9; i++ ){
+        auto alien = new Alien(enemy5, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>((enemy2.height + 10) * 4)});
+        enemies.emplace_back(alien);
+    }
+    Texture enemy6 = LoadTexture("../assets/spriteSheets/invader_001.png");
+    for(int i = 0; i <= 9; i++ ){
+        auto alien = new Alien(enemy6, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy1.width) * 5) + static_cast<float>(enemy1.width) * i),static_cast<float>((enemy2.height + 10) * 5)});
+        enemies.emplace_back(alien);
+    }
+
 
 
     while (!WindowShouldClose()) {
@@ -146,41 +151,19 @@ int main() {
         BeginDrawing();
         ClearBackground(BLUE);
 
-        //Moves map instead of moving player_idle
-        Vector2 direction{};
-        if(IsKeyDown(KEY_A) && playerShipPos.x > 0) direction.x -= 1.0;
-        if(IsKeyDown(KEY_D) && playerShipPos.x  <  static_cast<float>(windowWidth) * scale - static_cast<float>(playerShip.width) * scale) direction.x += 1.0;
-        if(Vector2Length(direction) != 0.0){
-            playerShipPos = Vector2Add(playerShipPos, Vector2Scale(Vector2Normalize(direction), speed * dt));
-        }
-
         DrawRenderers(setupTiles.first, scale);
 
-        for(auto i : leftBunkersPos){
-            Rectangle src{0.f, 0.f, (float)bunker_left.width, (float) bunker_left.height};
-            Rectangle dest{i.x, i.y,  scale * (float)bunker_left.width,  scale * (float) bunker_left.height};
-            DrawTexturePro(bunker_left, src, dest, Vector2{}, 0.f, WHITE);
+        player.Tick(dt);
+        bunker.Tick(dt);
+        for (auto e : enemies){
+            e->Tick(dt);
         }
 
-        for(auto i : rightBunkersPos){
-            Rectangle src{0.f, 0.f, (float)bunker_right.width, (float) bunker_right.height};
-            Rectangle dest{i.x, i.y,  scale * (float)bunker_right.width,  scale * (float) bunker_right.height};
-            DrawTexturePro(bunker_right, src, dest, Vector2{}, 0.f, WHITE);
-        }
-
-
-
-        Rectangle playerShipSrc{0.f, 0.f, (float)playerShip.width, (float) playerShip.height};
-        Rectangle playerShpDest{playerShipPos.x, playerShipPos.y,  scale * (float)playerShip.width,  scale * (float) playerShip.height};
-
-        DrawTexturePro(playerShip, playerShipSrc, playerShpDest, Vector2{}, 0.f, WHITE);
         EndDrawing();
     }
 
     // Unload everything before leaving.
 
-    UnloadTexture(bunker_left);
-    UnloadTexture(bunker_right);
 
     for (auto renderTexture: setupTiles.first){
         UnloadRenderTexture(renderTexture);
@@ -189,6 +172,13 @@ int main() {
     for (auto tileTexture: setupTiles.second){
         UnloadTexture(tileTexture);
     }
+    player.Dispose();
+    bunker.Dispose();
+    for (auto e : enemies){
+        e->Dispose();
+    }
+
+
     CloseWindow();
     return (0);
 }

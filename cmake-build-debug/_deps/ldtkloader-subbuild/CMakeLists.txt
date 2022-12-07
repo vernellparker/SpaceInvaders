@@ -1,7 +1,7 @@
 # Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 # file Copyright.txt or https://cmake.org/licensing for details.
 
-cmake_minimum_required(VERSION 3.23.2)
+cmake_minimum_required(VERSION 3.24.2)
 
 # We name the project and the target for the ExternalProject_Add() call
 # to something that will highlight to the user what we are working on if
@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(ldtkloader-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/Madour/LDtkLoader.git" "GIT_TAG" "1.0"
-                    SOURCE_DIR          "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-src"
-                    BINARY_DIR          "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-build"
+                    SOURCE_DIR          "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-src"
+                    BINARY_DIR          "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

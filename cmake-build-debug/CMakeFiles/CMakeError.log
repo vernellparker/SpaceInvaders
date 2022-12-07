@@ -1,23 +1,86 @@
 Performing C SOURCE FILE Test COMPILER_HAS_THOSE_TOGGLES failed with the following output:
-Change Dir: D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: D:/workspace/C++/SpaceInvaders/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/JetBrains/CLion 2021.2/bin/ninja/win/ninja.exe cmTC_a6c70 && [1/2] Building C object CMakeFiles\cmTC_a6c70.dir\src.c.obj
-FAILED: CMakeFiles/cmTC_a6c70.dir/src.c.obj 
-C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe  /nologo -DCOMPILER_HAS_THOSE_TOGGLES  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Werror=pointer-arith /showIncludes /FoCMakeFiles\cmTC_a6c70.dir\src.c.obj /FdCMakeFiles\cmTC_a6c70.dir\ /FS -c D:\workspace\Raylib\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp\src.c
+Run Build Command(s):nmake -f Makefile /nologo cmTC_5eeb6\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_5eeb6.dir\build.make /nologo -L                  CMakeFiles\cmTC_5eeb6.dir\build
+Building C object CMakeFiles/cmTC_5eeb6.dir/src.c.obj
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_5eeb6.dir\src.c.obj.d --working-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @C:\Users\verne\AppData\Local\Temp\nm6110.tmp
 cl : Command line error D8021 : invalid numeric argument '/Werror=pointer-arith'
-ninja: build stopped: subcommand failed.
+NMAKE : fatal error U1077: '"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"' : return code '0x2'
+Stop.
 
 
 Source file was:
 int main(void) { return 0; }
-Determining if the include file pthread.h exists failed with the following output:
-Change Dir: D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/CMakeFiles/CMakeTmp
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: D:/workspace/C++/SpaceInvaders/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/JetBrains/CLion 2021.2/bin/ninja/win/ninja.exe cmTC_6c1a0 && [1/2] Building C object CMakeFiles\cmTC_6c1a0.dir\CheckIncludeFile.c.obj
-FAILED: CMakeFiles/cmTC_6c1a0.dir/CheckIncludeFile.c.obj 
-C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_6c1a0.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_6c1a0.dir\ /FS -c D:\workspace\Raylib\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-D:\workspace\Raylib\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
-ninja: build stopped: subcommand failed.
+Run Build Command(s):nmake -f Makefile /nologo cmTC_d9bec\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_d9bec.dir\build.make /nologo -L                  CMakeFiles\cmTC_d9bec.dir\build
+Building C object CMakeFiles/cmTC_d9bec.dir/src.c.obj
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_d9bec.dir\src.c.obj.d --working-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @C:\Users\verne\AppData\Local\Temp\nm61CC.tmp
+src.c
+D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+NMAKE : fatal error U1077: '"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"' : return code '0x2'
+Stop.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: D:/workspace/C++/SpaceInvaders/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_fc363\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_fc363.dir\build.make /nologo -L                  CMakeFiles\cmTC_fc363.dir\build
+Building C object CMakeFiles/cmTC_fc363.dir/CheckFunctionExists.c.obj
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_fc363.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @C:\Users\verne\AppData\Local\Temp\nm6304.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_fc363.exe
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_fc363.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_fc363.dir\objects1.rsp @C:\Users\verne\AppData\Local\Temp\nm6353.tmp
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_fc363.dir\objects1.rsp /out:cmTC_fc363.exe /implib:cmTC_fc363.lib /pdb:D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp\cmTC_fc363.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_fc363.dir/intermediate.manifest CMakeFiles\cmTC_fc363.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
+NMAKE : fatal error U1077: '"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"' : return code '0xffffffff'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"' : return code '0x2'
+Stop.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: D:/workspace/C++/SpaceInvaders/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_15c92\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_15c92.dir\build.make /nologo -L                  CMakeFiles\cmTC_15c92.dir\build
+Building C object CMakeFiles/cmTC_15c92.dir/CheckFunctionExists.c.obj
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_15c92.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @C:\Users\verne\AppData\Local\Temp\nm63EF.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_15c92.exe
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_15c92.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_15c92.dir\objects1.rsp @C:\Users\verne\AppData\Local\Temp\nm642E.tmp
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_15c92.dir\objects1.rsp /out:cmTC_15c92.exe /implib:cmTC_15c92.lib /pdb:D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles\CMakeTmp\cmTC_15c92.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_15c92.dir/intermediate.manifest CMakeFiles\cmTC_15c92.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthread.lib'
+NMAKE : fatal error U1077: '"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"' : return code '0xffffffff'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"' : return code '0x2'
+Stop.
 
 
 

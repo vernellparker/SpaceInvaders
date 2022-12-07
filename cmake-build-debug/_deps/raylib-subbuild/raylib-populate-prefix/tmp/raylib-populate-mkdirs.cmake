@@ -4,16 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-src"
-  "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-build"
-  "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix"
-  "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp"
-  "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
-  "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src"
-  "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
+  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-src"
+  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-build"
+  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix"
+  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp"
+  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
+  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src"
+  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/workspace/Raylib/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/${subDir}")
 endforeach()
+if(cfgdir)
+  file(MAKE_DIRECTORY "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp${cfgdir}") # cfgdir has leading slash
+endif()
