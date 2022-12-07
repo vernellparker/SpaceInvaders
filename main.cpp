@@ -115,32 +115,32 @@ int main() {
     vector<Alien*> enemies;
     Texture enemy1 = LoadTexture("../assets/spriteSheets/invader_001.png");
     for(int i = 0; i <= 9; i++ ){
-        auto alien = new Alien(enemy1, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy1.width) * 5) + static_cast<float>(enemy1.width) * i),0});
+        auto alien = new Alien(enemy1, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy1.width) * 5) + static_cast<float>(enemy1.width) * i),  static_cast<float>(windowHeight)/2 });
         enemies.emplace_back(alien);
     }
     Texture enemy2 = LoadTexture("../assets/spriteSheets/invader_002.png");
     for(int i = 0; i <= 9; i++ ){
-        auto alien = new Alien(enemy2, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy2.width) * 5) + static_cast<float>(enemy2.width) * i),static_cast<float>(enemy1.height) + 10});
+        auto alien = new Alien(enemy2, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy2.width) * 5) + static_cast<float>(enemy2.width) * i),static_cast<float>(enemy1.height) + (static_cast<float>(windowHeight)/2) + 5});
         enemies.emplace_back(alien);
     }
     Texture enemy3 = LoadTexture("../assets/spriteSheets/invader_003.png");
     for(int i = 0; i <= 9; i++ ){
-        auto alien = new Alien(enemy3, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>((enemy2.height + 10 )* 2)});
+        auto alien = new Alien(enemy3, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>(enemy2.height ) + (static_cast<float>(windowHeight)/2) + 25});
         enemies.emplace_back(alien);
     }
     Texture enemy4 = LoadTexture("../assets/spriteSheets/invader_004.png");
     for(int i = 0; i <= 9; i++ ){
-        auto alien = new Alien(enemy4, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>((enemy2.height  + 10) * 3)});
+        auto alien = new Alien(enemy4, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>(enemy3.height ) + (static_cast<float>(windowHeight)/2)  + 45});
         enemies.emplace_back(alien);
     }
     Texture enemy5 = LoadTexture("../assets/spriteSheets/invader_005.png");
     for(int i = 0; i <= 9; i++ ){
-        auto alien = new Alien(enemy5, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>((enemy2.height + 10) * 4)});
+        auto alien = new Alien(enemy5, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy3.width) * 5) + static_cast<float>(enemy3.width) * i),static_cast<float>(enemy4.height ) + static_cast<float>(windowHeight) /2  + 65});
         enemies.emplace_back(alien);
     }
     Texture enemy6 = LoadTexture("../assets/spriteSheets/invader_001.png");
     for(int i = 0; i <= 9; i++ ){
-        auto alien = new Alien(enemy6, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy1.width) * 5) + static_cast<float>(enemy1.width) * i),static_cast<float>((enemy2.height + 10) * 5)});
+        auto alien = new Alien(enemy6, {static_cast<float>( (static_cast<float>(windowWidth) * scale /2) - (static_cast<float>(enemy1.width) * 5) + static_cast<float>(enemy1.width) * i),static_cast<float>(enemy1.height ) + static_cast<float>(windowHeight)/2  + 85});
         enemies.emplace_back(alien);
     }
 
