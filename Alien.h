@@ -12,7 +12,11 @@ public:
     Alien(Texture alien, Vector2 pos);
     void Tick(float deltaTime);
     void Dispose();
+    Vector2 GetAlienPosition(){return _alienPos;}
+    void SetAlienPosition(float x, float y);
+    void SetDirection(float direction);
     Rectangle GetCollisionRect(){return _collisionRect;}
+    void BumpDown();
 private:
     Texture2D _alien{};
     Vector2 _alienPos{};
@@ -26,6 +30,10 @@ private:
     const int _windowWidth = 288;
     const int _windowHeight = 448;
     float _runningTime{};
+    float _movementFrameCount{};
+    float _movementFrameCountMax{60};
+    float _direction{10};
+    bool _resetingDirection{};
 };
 
 

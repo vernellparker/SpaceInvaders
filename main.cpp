@@ -79,7 +79,6 @@ void DrawRenderers (const vector<RenderTexture2D>& renderers, int scale ){
                 static_cast<float>(renderer.texture.height * scale)
         };
 
-
         DrawTexturePro(renderer.texture, mapSrc, mapDest, {0}, .0f, WHITE);
     }
 };
@@ -144,27 +143,43 @@ int main() {
         enemies.emplace_back(alien);
     }
 
-
-
     while (!WindowShouldClose()) {
+
         float dt = GetFrameTime();
         BeginDrawing();
         ClearBackground(BLUE);
 
         DrawRenderers(setupTiles.first, scale);
-
         player.Tick(dt);
         bunker.Tick(dt);
+
         for (auto e : enemies){
             e->Tick(dt);
+        }
+
+        for (auto e : enemies){
+            if(e->GetAlienPosition().x >= (windowWidth * scale) - e->GetCollisionRect().width){
+                for (auto a : enemies) {
+                    a->SetDirection(-10);
+                    a->BumpDown();
+
+                }
+                break;
+            }
+
+            if(e->GetAlienPosition().x <= 0 ){
+                for (auto a : enemies) {
+                    a->SetDirection(10);
+                    a->BumpDown();
+                }
+                break;
+            }
         }
 
         EndDrawing();
     }
 
     // Unload everything before leaving.
-
-
     for (auto renderTexture: setupTiles.first){
         UnloadRenderTexture(renderTexture);
     }
@@ -172,12 +187,12 @@ int main() {
     for (auto tileTexture: setupTiles.second){
         UnloadTexture(tileTexture);
     }
+
     player.Dispose();
     bunker.Dispose();
     for (auto e : enemies){
         e->Dispose();
     }
-
 
     CloseWindow();
     return (0);

@@ -4,11 +4,21 @@
 
 #include "Alien.h"
 
-Alien::Alien(Texture alien, Vector2 pos):_alien(alien), _alienPos(pos) {
-}
+Alien::Alien(Texture alien, Vector2 pos):_alien(alien), _alienPos(pos) {}
 
 void Alien::Tick(float deltaTime) {
+    _movementFrameCount++;
+    if (_movementFrameCount >= _movementFrameCountMax ){
+        if(_resetingDirection){
+            _alienPos.y += _alien.width;
+            _resetingDirection = false;
+        }else{
 
+        }
+        _alienPos.x += _direction;
+        _movementFrameCount = 0;
+
+    }
     _runningTime += deltaTime;
 
     if (_runningTime >= _updateTime)
@@ -18,8 +28,9 @@ void Alien::Tick(float deltaTime) {
         if (_frame > _maxFrames){
             _frame = 0;
         }
-
     }
+
+
 
     // draw the character
     Rectangle source{static_cast<float>(_frame ) * static_cast<float>(_alien.width)/2, 0.f,  static_cast<float>(_alien.width)/2, static_cast<float>(_alien.height)};
@@ -31,4 +42,17 @@ void Alien::Tick(float deltaTime) {
 
 void Alien::Dispose() {
     UnloadTexture(_alien);
+}
+
+void Alien::SetAlienPosition(float x, float y) {
+     _alienPos.x = x;
+     _alienPos.y = y;
+}
+
+void Alien::SetDirection(float direction) {
+    _direction = direction;
+}
+
+void Alien::BumpDown() {
+    _resetingDirection = true;
 }
