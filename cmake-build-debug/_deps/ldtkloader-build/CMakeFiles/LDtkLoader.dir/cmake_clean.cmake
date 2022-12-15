@@ -27,8 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LDtkLoader.dir/src/Utils.cpp.obj.d"
   "CMakeFiles/LDtkLoader.dir/src/World.cpp.obj"
   "CMakeFiles/LDtkLoader.dir/src/World.cpp.obj.d"
-  "lib/LDtkLoader-d.lib"
-  "lib/LDtkLoader-d.pdb"
+  "lib/libLDtkLoader-d.a"
+  "lib/libLDtkLoader-d.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

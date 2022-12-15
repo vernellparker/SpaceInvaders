@@ -2,7 +2,6 @@
 #include <LDtkLoader/Project.hpp>
 #include <raylib.h>
 #include "Player.h"
-#include "Bunker.h"
 #include "Alien.h"
 #include "Laser.h"
 #include "map"
@@ -110,7 +109,6 @@ int main() {
     auto setupTiles = SetupTiles(world,WHITE);
 
     Player player( windowWidth, windowHeight);
-    Bunker bunker(world);
 
     //Todo: Check into this
     vector<Alien*> enemies;
@@ -175,107 +173,122 @@ int main() {
     int alienLaserCount{};
     int enemyLaserMultiplier{4};
     int enemyLaserMax{0};
-
+    Color playerLivesTextColor{GREEN};
+    bool shouldEndGame{false};
     srand(time(0));
-
     int random = rand() % 120;
+
     while (!WindowShouldClose()) {
-
-
         float dt = GetFrameTime();
         BeginDrawing();
         ClearBackground(BLUE);
-
         DrawRenderers(setupTiles.first, scale);
-        player.Tick(dt);
-        bunker.Tick(dt);
 
-        for (auto e : enemies){
-            e->Tick(dt);
-        }
-
-
-
-        if (random < enemies.size() && alienLaserCount <= enemyLaserMax){
-           auto laser  = new Laser(enemies[random]->GetAlienPosition(), false);
-            eLasers.insert({laser, false});
-            alienLaserCount++;
+        //-----------WIN CONDITIONS------------
+        if(enemies.empty()){
+            DrawText(TextFormat("You Win!"), 200, 160, 40, GREEN);
+        }else if( player.GetPlayerLives() <= 0  || shouldEndGame){
+            DrawText(TextFormat("You Loose!"), 200, 160, 40, RED);
         }else{
-            random = rand() % (enemies.size()* enemyLaserMultiplier);
-        }
-
-        cout << "Random: " << random << endl;
-        cout << "A laser count: " << alienLaserCount << endl;
-
-
-        enemies.erase(
-                std::remove_if(
-                        enemies.begin(),
-                        enemies.end(),
-                        [&playerLasers,&playerLaserCount](Alien* alien) -> bool {
-                            bool shouldRemove{false};
-                            for(auto &laser : playerLasers)
-                                if (CheckCollisionRecs(laser.first->GetCollisionRect(), alien->GetCollisionRect())) {
-                                    shouldRemove = true;
-                                    laser.second = true;
-
-                                }else {
-                                    shouldRemove = false;
-                                }
-                           return shouldRemove;
-                        }
-                ),
-                enemies.end()
-        );
-
-        for (auto it = playerLasers.cbegin(); it != playerLasers.cend() /* not hoisted */; /* no increment */)
-        {
-            if (it->first->GetLaserPosition().y <= 50)
-            {
-                playerLaserCount--;
-                playerLasers.erase(it++);    // or "it = m.erase(it)" since C++11
-            } else if (it->second){
-                  playerLasers.erase(it++);
-                playerLaserCount--;// or "it = m.erase(it)" since C++11
+            //-----------UI------------
+            if(player.GetPlayerLives() >= 3){
+                playerLivesTextColor = GREEN;
+            }else if(player.GetPlayerLives() == 2){
+                playerLivesTextColor = YELLOW;
+            }else if(player.GetPlayerLives() == 1) {
+                playerLivesTextColor = RED;
             }
-            else
-            {
-                ++it;
-            }
-        }
+            DrawText(TextFormat("Lives: %02i", player.GetPlayerLives()), 10, 0, 40, playerLivesTextColor);
+            DrawText(TextFormat("Enemies: %02i", enemies.size()), windowWidth, 0, 40, RED);
 
-        for (auto it = eLasers.cbegin(); it != eLasers.cend() /* not hoisted */; /* no increment */)
-        {
-            if (it->first->GetLaserPosition().y >= windowHeight * scale - 10)
-            {
-                eLasers.erase(it++);    // or "it = m.erase(it)" since C++11
-                alienLaserCount--;
-            } else if (it->second){
-                eLasers.erase(it++);
-                alienLaserCount--;// or "it = m.erase(it)" since C++11
+            //-----------TICKS------------
+            player.Tick(dt);
+            for (auto e : enemies){
+                e->Tick(dt);
             }
-            else
-            {
-                ++it;
-            }
-        }
-
-        for (auto l : playerLasers){
+            for (auto l : playerLasers){
                 l.first->Tick(dt);
-        }
-        for (auto el : eLasers){
-            el.first->Tick(dt);
-        }
+            }
+            for (auto el : eLasers){
+                el.first->Tick(dt);
+            }
 
-        if(IsKeyPressed(KEY_SPACE) && playerLaserCount <= 2){
-            auto laser  = new Laser(player.GetPlayerPos(), true);
-            playerLasers.insert({laser, false});
-            playerLaserCount+= 1;
-            cout << "Laser: " << playerLaserCount << endl;
-        }
+            //-----------LASERS------------
+            if (random < enemies.size() && alienLaserCount <= enemyLaserMax){
+                auto laser  = new Laser(enemies[random]->GetAlienPosition(), false);
+                eLasers.insert({laser, false});
+                alienLaserCount++;
+            }else{
+                random = rand() % (enemies.size()* enemyLaserMultiplier);
+            }
+            for (auto it = playerLasers.cbegin(); it != playerLasers.cend() /* not hoisted */; /* no increment */)
+            {
+                if (it->first->GetLaserPosition().y <= 50)
+                {
+                    playerLaserCount--;
+                    playerLasers.erase(it++);    // or "it = m.erase(it)" since C++11
+                } else if (it->second){
+                    playerLasers.erase(it++);
+                    playerLaserCount--;// or "it = m.erase(it)" since C++11
+                }
+                else
+                {
+                    ++it;
+                }
+            }
 
+            for (auto it = eLasers.cbegin(); it != eLasers.cend() /* not hoisted */; /* no increment */)
+            {
+                if(CheckCollisionRecs(it->first->GetCollisionRect(), player.GetCollisionRect())){
+                    player.SubtractPlayerLife();
+                    eLasers.erase(it++);    // or "it = m.erase(it)" since C++11
+                    alienLaserCount--;
+                }else{
 
-        for (auto e : enemies){
+                    if (it->first->GetLaserPosition().y >= windowHeight * scale - 10 || it->second)
+                    {
+                        eLasers.erase(it++);    // or "it = m.erase(it)" since C++11
+                        alienLaserCount--;
+                    }else
+                    {
+                        ++it;
+                    }
+                }
+
+            }
+
+            if(IsKeyPressed(KEY_SPACE) && playerLaserCount <= 2){
+                auto laser  = new Laser(player.GetPlayerPos(), true);
+                playerLasers.insert({laser, false});
+                playerLaserCount+= 1;
+                cout << "Laser: " << playerLaserCount << endl;
+            }
+
+            //-----------ENEMIES------------
+            enemies.erase(
+                    std::remove_if(
+                            enemies.begin(),
+                            enemies.end(),
+                            [&playerLasers,&playerLaserCount](Alien* alien) -> bool {
+                                bool shouldRemove{false};
+                                for(auto &laser : playerLasers)
+                                    if (CheckCollisionRecs(laser.first->GetCollisionRect(), alien->GetCollisionRect())) {
+                                        shouldRemove = true;
+                                        laser.second = true;
+
+                                    }else {
+                                        shouldRemove = false;
+                                    }
+                                return shouldRemove;
+                            }
+                    ),
+                    enemies.end()
+            );
+            for (auto e : enemies){
+                if(e->GetAlienPosition().y >= windowHeight * 2 - 200){
+                    shouldEndGame = true;
+                    break;
+                }
                 if(e->GetAlienPosition().x >= (windowWidth * scale) - e->GetCollisionRect().width){
                     for (auto a : enemies) {
                         a->SetDirection(-10);
@@ -283,7 +296,6 @@ int main() {
                     }
                     break;
                 }
-
                 if(e->GetAlienPosition().x <= 0 ){
                     for (auto a : enemies) {
                         a->SetDirection(10);
@@ -291,30 +303,31 @@ int main() {
                     }
                     break;
                 }
-        }
-        if(enemies.size() <= 10){
-            for (auto e : enemies){
-               e->SetSpeedByMovementFrameCount(5);
             }
-            enemyLaserMax = 6;
-            enemyLaserMultiplier = 1;
-        }else if(enemies.size() <= 20){
-            for (auto e : enemies){
-                e->SetSpeedByMovementFrameCount(20);
+            if(enemies.size() <= 10){
+                for (auto e : enemies){
+                    e->SetSpeedByMovementFrameCount(5);
+                }
+                enemyLaserMax = 6;
+                enemyLaserMultiplier = 1;
+            }else if(enemies.size() <= 20){
+                for (auto e : enemies){
+                    e->SetSpeedByMovementFrameCount(20);
+                }
+                enemyLaserMax = 4;
+                enemyLaserMultiplier = 2;
+            }else if(enemies.size() <= 30){
+                for (auto e : enemies){
+                    e->SetSpeedByMovementFrameCount(30);
+                }
+                enemyLaserMax = 2;
+                enemyLaserMultiplier = 3;
             }
-            enemyLaserMax = 4;
-            enemyLaserMultiplier = 2;
-        }else if(enemies.size() <= 30){
-            for (auto e : enemies){
-                e->SetSpeedByMovementFrameCount(30);
-            }
-            enemyLaserMax = 2;
-            enemyLaserMultiplier = 3;
         }
         EndDrawing();
     }
 
-    // Unload everything before leaving.
+    //-----------DISPOSE OF Everything------------
     for (auto renderTexture: setupTiles.first){
         UnloadRenderTexture(renderTexture);
     }
@@ -324,7 +337,6 @@ int main() {
     }
 
     player.Dispose();
-    bunker.Dispose();
     for (auto e : enemies){
         e->Dispose();
     }
@@ -332,6 +344,7 @@ int main() {
         i.first->Dispose();
     }
 
+    //-----------CLOSE------------
     CloseWindow();
     return (0);
 }

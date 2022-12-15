@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-src"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-build"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-src"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-build"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "lib/LDtkLoader-d.lib"
+  "lib/libLDtkLoader-d.a"
 )

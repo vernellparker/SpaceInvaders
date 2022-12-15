@@ -13,17 +13,17 @@ project(ldtkloader-populate NONE)
 # Pass through things we've already detected in the main project to avoid
 # paying the cost of redetecting them again in ExternalProject_Add()
 set(GIT_EXECUTABLE [==[C:/Program Files/Git/cmd/git.exe]==])
-set(GIT_VERSION_STRING [==[2.24.1.windows.2]==])
+set(GIT_VERSION_STRING [==[2.34.1.windows.1]==])
 set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[C:/Program Files/Git/cmd/git.exe;2.24.1.windows.2]==]
+  [==[C:/Program Files/Git/cmd/git.exe;2.34.1.windows.1]==]
 )
 
 
 include(ExternalProject)
 ExternalProject_Add(ldtkloader-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/Madour/LDtkLoader.git" "GIT_TAG" "1.0"
-                    SOURCE_DIR          "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-src"
-                    BINARY_DIR          "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-build"
+                    SOURCE_DIR          "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-src"
+                    BINARY_DIR          "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

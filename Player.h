@@ -11,6 +11,9 @@ public:
     Vector2 GetPlayerPos(){return _texture2DPos;}
     void Tick(float deltaTime) override;
     void Dispose() override;
+    Rectangle GetCollisionRect(){return _collisionRect;}
+    [[nodiscard]] int GetPlayerLives() const{return _playerLives;}
+    void SubtractPlayerLife();
 private:
     Texture2D _texture2D{};
     Vector2 _texture2DPos{};
@@ -19,6 +22,9 @@ private:
     const int _textureHeightPosScale = 10;
     const int _windowWidth = 288;
     const int _windowHeight = 448;
+    Rectangle _collisionRect{};
+    int _playerLives{3};
+
 };
 
 

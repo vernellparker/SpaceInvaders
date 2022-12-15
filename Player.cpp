@@ -16,7 +16,6 @@ Player::Player(int windowWidth, int windowHeight) {
 
 
 void Player::Tick(float deltaTime) {
-
     Vector2 direction{};
     if(IsKeyDown(KEY_A) && _texture2DPos.x > 0) direction.x -= 1.0;
     if(IsKeyDown(KEY_D) && _texture2DPos.x < static_cast<float>(_windowWidth) * static_cast<float>(_scale) - static_cast<float>(_texture2D.width) * static_cast<float>(_scale)) direction.x += 1.0;
@@ -24,15 +23,17 @@ void Player::Tick(float deltaTime) {
         _texture2DPos = Vector2Add(_texture2DPos, Vector2Scale(Vector2Normalize(direction), _speed * deltaTime));
     }
 
-
     Rectangle playerShipSrc{0.f, 0.f, (float)_texture2D.width, (float) _texture2D.height};
     Rectangle playerShpDest{_texture2DPos.x, _texture2DPos.y, static_cast<float>(_scale) * (float)_texture2D.width, static_cast<float>(_scale) * (float) _texture2D.height};
-
+    _collisionRect = playerShpDest;
     DrawTexturePro(_texture2D, playerShipSrc, playerShpDest, Vector2{}, 0.f, WHITE);
-
 }
 
 void Player::Dispose() {
     UnloadTexture(_texture2D);
+}
+
+void Player::SubtractPlayerLife() {
+    _playerLives--;
 }
 

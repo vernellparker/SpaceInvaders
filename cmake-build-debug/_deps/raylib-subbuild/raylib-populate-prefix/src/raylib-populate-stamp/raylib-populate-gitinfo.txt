@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=C:/Program Files/JetBrains/CLion 2021.2/bin/cmake/win/bin/cmake.exe;-P;D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp/raylib-populate-gitclone.cmake
-source_dir=D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-src
-work_dir=D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps
+command=C:/Program Files/JetBrains/CLion 2022.2.2/bin/cmake/win/bin/cmake.exe;-P;C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp/raylib-populate-gitclone.cmake
+source_dir=C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-src
+work_dir=C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps
 repository=https://github.com/raysan5/raylib.git
 remote=origin
 init_submodules=TRUE

@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-src"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-build"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/tmp"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src"
-  "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-src"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-build"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/tmp"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src"
+  "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/ldtkloader-subbuild/ldtkloader-populate-prefix/src/ldtkloader-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

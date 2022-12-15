@@ -13,8 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/raylib.dir/rtextures.c.obj.d"
   "CMakeFiles/raylib.dir/utils.c.obj"
   "CMakeFiles/raylib.dir/utils.c.obj.d"
-  "raylib.lib"
-  "raylib.pdb"
+  "libraylib.a"
+  "libraylib.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

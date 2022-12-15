@@ -13,17 +13,17 @@ project(raylib-populate NONE)
 # Pass through things we've already detected in the main project to avoid
 # paying the cost of redetecting them again in ExternalProject_Add()
 set(GIT_EXECUTABLE [==[C:/Program Files/Git/cmd/git.exe]==])
-set(GIT_VERSION_STRING [==[2.24.1.windows.2]==])
+set(GIT_VERSION_STRING [==[2.34.1.windows.1]==])
 set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[C:/Program Files/Git/cmd/git.exe;2.24.1.windows.2]==]
+  [==[C:/Program Files/Git/cmd/git.exe;2.34.1.windows.1]==]
 )
 
 
 include(ExternalProject)
 ExternalProject_Add(raylib-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/raysan5/raylib.git" "GIT_TAG" "4.2.0"
-                    SOURCE_DIR          "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-src"
-                    BINARY_DIR          "D:/workspace/C++/SpaceInvaders/cmake-build-debug/_deps/raylib-build"
+                    SOURCE_DIR          "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-src"
+                    BINARY_DIR          "C:/workspace/c++/SpaceInvaders/cmake-build-debug/_deps/raylib-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

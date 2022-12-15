@@ -24,7 +24,7 @@ endif()
 include(${CPM_DOWNLOAD_LOCATION})
 
 
-add_executable(SpaceInvaders main.cpp Player.cpp Player.h Bunker.cpp Bunker.h Alien.cpp Alien.h Laser.cpp Laser.h Laser.h BaseCharacter.cpp BaseCharacter.h BaseCharacter.h)
+add_executable(SpaceInvaders main.cpp Player.cpp Player.h Alien.cpp Alien.h Laser.cpp Laser.h Laser.h BaseCharacter.cpp BaseCharacter.h BaseCharacter.h)
 include(cmake/CPM.cmake)
 CPMAddPackage("gh:raysan5/raylib#4.2.0")
 CPMAddPackage("gh:Madour/LDtkLoader#1.0")
