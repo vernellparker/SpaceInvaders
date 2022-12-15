@@ -6,3 +6,4 @@ C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.3162
 C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/include/concurrencysal.h
 C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/include/vadefs.h
 C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/include/stdbool.h
+D:/workspace/C++/SpaceInvaders/BaseCharacter.h

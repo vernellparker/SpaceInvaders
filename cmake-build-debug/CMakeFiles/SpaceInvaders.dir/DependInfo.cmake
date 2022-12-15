@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/workspace/C++/SpaceInvaders/Alien.cpp" "CMakeFiles/SpaceInvaders.dir/Alien.cpp.obj" "msvc" "CMakeFiles/SpaceInvaders.dir/Alien.cpp.obj.d"
+  "D:/workspace/C++/SpaceInvaders/BaseCharacter.cpp" "CMakeFiles/SpaceInvaders.dir/BaseCharacter.cpp.obj" "msvc" "CMakeFiles/SpaceInvaders.dir/BaseCharacter.cpp.obj.d"
   "D:/workspace/C++/SpaceInvaders/Bunker.cpp" "CMakeFiles/SpaceInvaders.dir/Bunker.cpp.obj" "msvc" "CMakeFiles/SpaceInvaders.dir/Bunker.cpp.obj.d"
+  "D:/workspace/C++/SpaceInvaders/Laser.cpp" "CMakeFiles/SpaceInvaders.dir/Laser.cpp.obj" "msvc" "CMakeFiles/SpaceInvaders.dir/Laser.cpp.obj.d"
   "D:/workspace/C++/SpaceInvaders/main.cpp" "CMakeFiles/SpaceInvaders.dir/main.cpp.obj" "msvc" "CMakeFiles/SpaceInvaders.dir/main.cpp.obj.d"
   "D:/workspace/C++/SpaceInvaders/Player.cpp" "CMakeFiles/SpaceInvaders.dir/player.cpp.obj" "msvc" "CMakeFiles/SpaceInvaders.dir/player.cpp.obj.d"
   )

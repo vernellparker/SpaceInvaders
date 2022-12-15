@@ -324,10 +324,22 @@
 		<Unit filename="D:/workspace/C++/SpaceInvaders/Alien.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
+		<Unit filename="D:/workspace/C++/SpaceInvaders/BaseCharacter.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/workspace/C++/SpaceInvaders/BaseCharacter.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
 		<Unit filename="D:/workspace/C++/SpaceInvaders/Bunker.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/workspace/C++/SpaceInvaders/Bunker.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/workspace/C++/SpaceInvaders/Laser.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="D:/workspace/C++/SpaceInvaders/Laser.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="D:/workspace/C++/SpaceInvaders/Player.cpp">

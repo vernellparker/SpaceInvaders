@@ -138,12 +138,54 @@ CMakeFiles\SpaceInvaders.dir\Alien.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpaceInvaders.dir\Alien.cpp.s /c D:\workspace\C++\SpaceInvaders\Alien.cpp
 <<
 
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: CMakeFiles\SpaceInvaders.dir\flags.make
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: D:\workspace\C++\SpaceInvaders\Laser.cpp
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: CMakeFiles\SpaceInvaders.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpaceInvaders.dir/Laser.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj.d --working-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\SpaceInvaders.dir\Laser.cpp.obj /FdCMakeFiles\SpaceInvaders.dir\ /FS -c D:\workspace\C++\SpaceInvaders\Laser.cpp
+<<
+
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/Laser.cpp.i"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe > CMakeFiles\SpaceInvaders.dir\Laser.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\workspace\C++\SpaceInvaders\Laser.cpp
+<<
+
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Laser.cpp.s"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpaceInvaders.dir\Laser.cpp.s /c D:\workspace\C++\SpaceInvaders\Laser.cpp
+<<
+
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: CMakeFiles\SpaceInvaders.dir\flags.make
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: D:\workspace\C++\SpaceInvaders\BaseCharacter.cpp
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: CMakeFiles\SpaceInvaders.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SpaceInvaders.dir/BaseCharacter.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj.d --working-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj /FdCMakeFiles\SpaceInvaders.dir\ /FS -c D:\workspace\C++\SpaceInvaders\BaseCharacter.cpp
+<<
+
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/BaseCharacter.cpp.i"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe > CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\workspace\C++\SpaceInvaders\BaseCharacter.cpp
+<<
+
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/BaseCharacter.cpp.s"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.s /c D:\workspace\C++\SpaceInvaders\BaseCharacter.cpp
+<<
+
 # Object files for target SpaceInvaders
 SpaceInvaders_OBJECTS = \
 "CMakeFiles\SpaceInvaders.dir\main.cpp.obj" \
 "CMakeFiles\SpaceInvaders.dir\Player.cpp.obj" \
 "CMakeFiles\SpaceInvaders.dir\Bunker.cpp.obj" \
-"CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj"
+"CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj" \
+"CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj" \
+"CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj"
 
 # External object files for target SpaceInvaders
 SpaceInvaders_EXTERNAL_OBJECTS =
@@ -152,12 +194,14 @@ SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\main.cpp.obj
 SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\Player.cpp.obj
 SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\Bunker.cpp.obj
 SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj
+SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj
+SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj
 SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\build.make
 SpaceInvaders.exe: _deps\raylib-build\raylib\raylib.lib
 SpaceInvaders.exe: _deps\ldtkloader-build\lib\LDtkLoader-d.lib
 SpaceInvaders.exe: _deps\raylib-build\raylib\external\glfw\src\glfw3.lib
 SpaceInvaders.exe: CMakeFiles\SpaceInvaders.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable SpaceInvaders.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\workspace\C++\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable SpaceInvaders.exe"
 	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\SpaceInvaders.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\SpaceInvaders.dir\objects1.rsp @<<
  /out:SpaceInvaders.exe /implib:SpaceInvaders.lib /pdb:D:\workspace\C++\SpaceInvaders\cmake-build-debug\SpaceInvaders.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  _deps\raylib-build\raylib\raylib.lib _deps\ldtkloader-build\lib\LDtkLoader-d.lib opengl32.lib glu32.lib winmm.lib _deps\raylib-build\raylib\external\glfw\src\glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

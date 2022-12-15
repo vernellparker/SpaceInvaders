@@ -234,6 +234,30 @@ Alien.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\Alien.cpp.s
 .PHONY : Alien.cpp.s
 
+BaseCharacter.obj: BaseCharacter.cpp.obj
+.PHONY : BaseCharacter.obj
+
+# target to build an object file
+BaseCharacter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj
+.PHONY : BaseCharacter.cpp.obj
+
+BaseCharacter.i: BaseCharacter.cpp.i
+.PHONY : BaseCharacter.i
+
+# target to preprocess a source file
+BaseCharacter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.i
+.PHONY : BaseCharacter.cpp.i
+
+BaseCharacter.s: BaseCharacter.cpp.s
+.PHONY : BaseCharacter.s
+
+# target to generate assembly for a file
+BaseCharacter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.s
+.PHONY : BaseCharacter.cpp.s
+
 Bunker.obj: Bunker.cpp.obj
 .PHONY : Bunker.obj
 
@@ -257,6 +281,30 @@ Bunker.s: Bunker.cpp.s
 Bunker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\Bunker.cpp.s
 .PHONY : Bunker.cpp.s
+
+Laser.obj: Laser.cpp.obj
+.PHONY : Laser.obj
+
+# target to build an object file
+Laser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj
+.PHONY : Laser.cpp.obj
+
+Laser.i: Laser.cpp.i
+.PHONY : Laser.i
+
+# target to preprocess a source file
+Laser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\Laser.cpp.i
+.PHONY : Laser.cpp.i
+
+Laser.s: Laser.cpp.s
+.PHONY : Laser.s
+
+# target to generate assembly for a file
+Laser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceInvaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpaceInvaders.dir\Laser.cpp.s
+.PHONY : Laser.cpp.s
 
 Player.obj: Player.cpp.obj
 .PHONY : Player.obj
@@ -326,9 +374,15 @@ help:
 	@echo ... Alien.obj
 	@echo ... Alien.i
 	@echo ... Alien.s
+	@echo ... BaseCharacter.obj
+	@echo ... BaseCharacter.i
+	@echo ... BaseCharacter.s
 	@echo ... Bunker.obj
 	@echo ... Bunker.i
 	@echo ... Bunker.s
+	@echo ... Laser.obj
+	@echo ... Laser.i
+	@echo ... Laser.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s

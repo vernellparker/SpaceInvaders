@@ -10,6 +10,18 @@ CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj: "C:\Program Files\Microsoft Visual S
 CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h"
 CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h"
 CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdbool.h"
+CMakeFiles\SpaceInvaders.dir\Alien.cpp.obj: D:\workspace\C++\SpaceInvaders\BaseCharacter.h
+
+
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: D:\workspace\C++\SpaceInvaders\BaseCharacter.cpp
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: D:\workspace\C++\SpaceInvaders\BaseCharacter.h
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: _deps\raylib-src\src\raylib.h
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdarg.h"
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h"
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h"
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h"
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h"
+CMakeFiles\SpaceInvaders.dir\BaseCharacter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdbool.h"
 
 
 CMakeFiles\SpaceInvaders.dir\Bunker.cpp.obj: D:\workspace\C++\SpaceInvaders\Bunker.cpp
@@ -160,6 +172,18 @@ CMakeFiles\SpaceInvaders.dir\Bunker.cpp.obj: _deps\ldtkloader-src\include\LDtkLo
 CMakeFiles\SpaceInvaders.dir\Bunker.cpp.obj: _deps\ldtkloader-src\include\LDtkLoader\World.hpp
 
 
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: D:\workspace\C++\SpaceInvaders\Laser.cpp
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: D:\workspace\C++\SpaceInvaders\Laser.h
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: _deps\raylib-src\src\raylib.h
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdarg.h"
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h"
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h"
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h"
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h"
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdbool.h"
+CMakeFiles\SpaceInvaders.dir\Laser.cpp.obj: D:\workspace\C++\SpaceInvaders\BaseCharacter.h
+
+
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: D:\workspace\C++\SpaceInvaders\main.cpp
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\iostream"
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\yvals_core.h"
@@ -306,8 +330,10 @@ CMakeFiles\SpaceInvaders.dir\main.cpp.obj: _deps\raylib-src\src\raylib.h
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdarg.h"
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdbool.h"
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: D:\workspace\C++\SpaceInvaders\Player.h
+CMakeFiles\SpaceInvaders.dir\main.cpp.obj: D:\workspace\C++\SpaceInvaders\BaseCharacter.h
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: D:\workspace\C++\SpaceInvaders\Bunker.h
 CMakeFiles\SpaceInvaders.dir\main.cpp.obj: D:\workspace\C++\SpaceInvaders\Alien.h
+CMakeFiles\SpaceInvaders.dir\main.cpp.obj: D:\workspace\C++\SpaceInvaders\Laser.h
 
 
 CMakeFiles\SpaceInvaders.dir\player.cpp.obj: D:\workspace\C++\SpaceInvaders\Player.cpp
@@ -319,6 +345,7 @@ CMakeFiles\SpaceInvaders.dir\player.cpp.obj: "C:\Program Files\Microsoft Visual 
 CMakeFiles\SpaceInvaders.dir\player.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h"
 CMakeFiles\SpaceInvaders.dir\player.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h"
 CMakeFiles\SpaceInvaders.dir\player.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdbool.h"
+CMakeFiles\SpaceInvaders.dir\player.cpp.obj: D:\workspace\C++\SpaceInvaders\BaseCharacter.h
 CMakeFiles\SpaceInvaders.dir\player.cpp.obj: _deps\raylib-src\src\raymath.h
 CMakeFiles\SpaceInvaders.dir\player.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\math.h"
 CMakeFiles\SpaceInvaders.dir\player.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_math.h"
@@ -337,8 +364,6 @@ D:\workspace\C++\SpaceInvaders\Alien.h:
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h":
-
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\sys\types.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility":
 
@@ -363,6 +388,16 @@ _deps\raylib-src\src\raylib.h:
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime_string.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdbool.h":
+
+D:\workspace\C++\SpaceInvaders\BaseCharacter.h:
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wctype.h":
+
+D:\workspace\C++\SpaceInvaders\BaseCharacter.cpp:
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wstdio.h":
+
+"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\crtdefs.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\intrin0.h":
 
@@ -405,12 +440,6 @@ _deps\ldtkloader-src\include\LDtkLoader\World.hpp:
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime_new_debug.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime_new.h":
-
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wctype.h":
-
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wstdio.h":
-
-"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\crtdefs.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm":
 
@@ -456,8 +485,6 @@ D:\workspace\C++\SpaceInvaders\Player.cpp:
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\string.h":
 
-"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xstddef":
-
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_memory.h":
 
 _deps\ldtkloader-src\include\LDtkLoader\defs\LayerDef.hpp:
@@ -477,6 +504,10 @@ _deps\ldtkloader-src\include\LDtkLoader\defs\LayerDef.hpp:
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wprocess.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_wtime.h":
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\sys\types.h":
+
+"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xstddef":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\cstddef":
 
@@ -619,6 +650,10 @@ _deps\ldtkloader-src\include\LDtkLoader\Layer.hpp:
 _deps\ldtkloader-src\include\LDtkLoader\Tile.hpp:
 
 _deps\ldtkloader-src\include\LDtkLoader\Entity.hpp:
+
+D:\workspace\C++\SpaceInvaders\Laser.cpp:
+
+D:\workspace\C++\SpaceInvaders\Laser.h:
 
 D:\workspace\C++\SpaceInvaders\main.cpp:
 
