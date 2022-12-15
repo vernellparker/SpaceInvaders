@@ -6,7 +6,7 @@
 #include "raymath.h"
 
 Player::Player(int windowWidth, int windowHeight) {
-    _texture2D = LoadTexture("../assets/spriteSheets/SpaceInvaders_player.png");
+    _texture2D = LoadTexture("../../assets/spriteSheets/SpaceInvaders_player.png");
     _texture2DPos = {
             static_cast<float>(windowWidth) / 2 * static_cast<float>(_scale) - static_cast<float>(_scale) * static_cast<float>(_texture2D.width) / 2 ,
             static_cast<float>(windowHeight) * static_cast<float>(_scale) - static_cast<float>(_texture2D.height) * static_cast<float>(_textureHeightPosScale)

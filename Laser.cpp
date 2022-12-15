@@ -6,7 +6,7 @@
 
 
 Laser::Laser(Vector2 spawnPoint, bool isPlayer): _isPlayer(isPlayer) {
-    _laser = LoadTexture("../assets/images/SpaceInvaders_2.png");
+    _laser = LoadTexture("../../assets/images/SpaceInvaders_2.png");
     _laserPos.y = spawnPoint.y - 2;
     _laserPos.x = spawnPoint.x - ((static_cast<float>(_laser.width)/2) - 10);
 }

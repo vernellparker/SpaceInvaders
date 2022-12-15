@@ -4,6 +4,7 @@ project(SpaceInvaders)
 set(CMAKE_CXX_STANDARD 17)
 
 set(CPM_DOWNLOAD_VERSION 0.36.0)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/)
 
 if(CPM_SOURCE_CACHE)
     set(CPM_DOWNLOAD_LOCATION "${CPM_SOURCE_CACHE}/cpm/CPM_${CPM_DOWNLOAD_VERSION}.cmake")
@@ -29,5 +30,9 @@ include(cmake/CPM.cmake)
 CPMAddPackage("gh:raysan5/raylib#4.2.0")
 CPMAddPackage("gh:Madour/LDtkLoader#1.0")
 
+include_directories(assets)
+
 # link dependencies
 target_link_libraries(SpaceInvaders raylib LDtkLoader)
+
+

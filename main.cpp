@@ -36,7 +36,7 @@ pair <vector<RenderTexture2D>, vector<Texture2D>> SetupTiles(const ldtk::World& 
         const auto& tiles_vector = layer.allTiles();
 
         // Load the texture and the renderer.
-        Texture2D texture = LoadTexture(("../assets/SpaceInvaders/map/" + layer.getTileset().path).c_str());
+        Texture2D texture = LoadTexture(("../../assets/SpaceInvaders/map/" + layer.getTileset().path).c_str());
         textures.emplace_back(texture);
         RenderTexture2D renderer = LoadRenderTexture(256* 3, 448*3);
 
@@ -92,7 +92,7 @@ int main() {
 
     // load the LDtk World from file
     try {
-        ldtk_project.loadFromFile("../assets/SpaceInvaders/map/SpaceInvaders.ldtk");
+        ldtk_project.loadFromFile("../../assets/SpaceInvaders/map/SpaceInvaders.ldtk");
     }
     catch (std::exception& ex) {
         std::cerr << ex.what() << std::endl;
@@ -112,7 +112,7 @@ int main() {
 
     //Todo: Check into this
     vector<Alien*> enemies;
-    Texture enemy1 = LoadTexture("../assets/spriteSheets/invader_001.png");
+    Texture enemy1 = LoadTexture("../../assets/spriteSheets/invader_001.png");
     for(int i = 0; i <= 9; i++ ){
         auto alien = new Alien(Texture2D(), Vector2(), enemy1,
                                {static_cast<float>((static_cast<float>(windowWidth) * scale / 2) -
@@ -121,7 +121,7 @@ int main() {
                                 static_cast<float>(windowHeight) / 2});
         enemies.emplace_back(alien);
     }
-    Texture enemy2 = LoadTexture("../assets/spriteSheets/invader_002.png");
+    Texture enemy2 = LoadTexture("../../assets/spriteSheets/invader_002.png");
     for(int i = 0; i <= 9; i++ ){
         auto alien = new Alien(Texture2D(), Vector2(), enemy2,
                                {static_cast<float>((static_cast<float>(windowWidth) * scale / 2) -
@@ -130,7 +130,7 @@ int main() {
                                 static_cast<float>(enemy1.height) + (static_cast<float>(windowHeight) / 2) + 5});
         enemies.emplace_back(alien);
     }
-    Texture enemy3 = LoadTexture("../assets/spriteSheets/invader_003.png");
+    Texture enemy3 = LoadTexture("../../assets/spriteSheets/invader_003.png");
     for(int i = 0; i <= 9; i++ ){
         auto alien = new Alien(Texture2D(), Vector2(), enemy3,
                                {static_cast<float>((static_cast<float>(windowWidth) * scale / 2) -
@@ -139,7 +139,7 @@ int main() {
                                 static_cast<float>(enemy2.height ) + (static_cast<float>(windowHeight) / 2) + 25});
         enemies.emplace_back(alien);
     }
-    Texture enemy4 = LoadTexture("../assets/spriteSheets/invader_004.png");
+    Texture enemy4 = LoadTexture("../../assets/spriteSheets/invader_004.png");
     for(int i = 0; i <= 9; i++ ){
         auto alien = new Alien(Texture2D(), Vector2(), enemy4,
                                {static_cast<float>((static_cast<float>(windowWidth) * scale / 2) -
@@ -148,7 +148,7 @@ int main() {
                                 static_cast<float>(enemy3.height ) + (static_cast<float>(windowHeight) / 2) + 45});
         enemies.emplace_back(alien);
     }
-    Texture enemy5 = LoadTexture("../assets/spriteSheets/invader_005.png");
+    Texture enemy5 = LoadTexture("../../assets/spriteSheets/invader_005.png");
     for(int i = 0; i <= 9; i++ ){
         auto alien = new Alien(Texture2D(), Vector2(), enemy5,
                                {static_cast<float>((static_cast<float>(windowWidth) * scale / 2) -
@@ -157,7 +157,7 @@ int main() {
                                 static_cast<float>(enemy4.height ) + static_cast<float>(windowHeight) / 2 + 65});
         enemies.emplace_back(alien);
     }
-    Texture enemy6 = LoadTexture("../assets/spriteSheets/invader_001.png");
+    Texture enemy6 = LoadTexture("../../assets/spriteSheets/invader_001.png");
     for(int i = 0; i <= 9; i++ ){
         auto alien = new Alien(Texture2D(), Vector2(), enemy6,
                                {static_cast<float>((static_cast<float>(windowWidth) * scale / 2) -
